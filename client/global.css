@@ -1,0 +1,104 @@
+/** @import must precede all other statements */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Tailwind CSS theme - OZ Kitchen
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+  */
+  :root {
+    --background: 186 50% 97%;
+    --foreground: 0 0% 0%;
+
+    --card: 30 75% 98%;
+    --card-foreground: 0 0% 0%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+
+    --primary: 35 75% 58%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 186 45% 20%;
+    --secondary-foreground: 0 0% 96%;
+
+    --muted: 0 0% 91%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 133 38% 53%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 91%;
+    --input: 0 0% 91%;
+    --ring: 35 75% 58%;
+
+    --radius: 0.5rem;
+
+    --oz-teal: 186 45% 20%;
+    --oz-orange: 35 75% 58%;
+    --oz-green: 133 38% 53%;
+    --oz-gray-light: 0 0% 96%;
+    --oz-gray-border: 0 0% 91%;
+    --oz-gray-text: 0 0% 40%;
+    --oz-gray-placeholder: 0 0% 74%;
+  }
+
+  .dark {
+    --background: 186 45% 20%;
+    --foreground: 0 0% 96%;
+
+    --card: 186 45% 15%;
+    --card-foreground: 0 0% 96%;
+
+    --popover: 186 45% 15%;
+    --popover-foreground: 0 0% 96%;
+
+    --primary: 35 75% 58%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 186 50% 97%;
+    --secondary-foreground: 0 0% 0%;
+
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 74%;
+
+    --accent: 133 38% 53%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 96%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 35 75% 58%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
